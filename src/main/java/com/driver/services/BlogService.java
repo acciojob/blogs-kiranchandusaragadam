@@ -35,6 +35,7 @@ public class BlogService {
             blog.setUser(user);
             // save the blog
             blogRepository1.save(blog);
+            userRepository1.save(user);
             return blog;
         }
         return null;
