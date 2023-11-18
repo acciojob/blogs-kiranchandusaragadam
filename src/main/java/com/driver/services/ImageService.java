@@ -46,14 +46,16 @@ public class ImageService {
             String[] arr = imgDimensions.split("X"); // 2X3
             int inLen = Integer.parseInt(arr[0]);
             int inWid = Integer.parseInt(arr[1]);
-            int inArea = inLen * inWid;
+//            int inArea = inLen * inWid;
 
             arr = screenDimensions.split("X");  // 9X12
             int outLen = Integer.parseInt(arr[0]);
             int outWid = Integer.parseInt(arr[1]);
-            int outArea = outLen * outWid;
+//            int outArea = outLen * outWid;
 
-            count = outArea / inArea;
+            int c1 = (outLen/inLen) * (outWid/inWid);
+
+            count = c1;
         }
         return count;
     }
