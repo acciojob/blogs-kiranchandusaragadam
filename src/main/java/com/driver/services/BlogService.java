@@ -43,9 +43,6 @@ public class BlogService {
 
     public void deleteBlog(int blogId){
         //delete blog and corresponding images
-        Optional<Blog> blogOp = blogRepository1.findById(blogId);
-        if(blogOp.isPresent()){
-            blogRepository1.deleteById(blogId);
-        }
+        blogRepository1.deleteById(blogId);
     }
 }

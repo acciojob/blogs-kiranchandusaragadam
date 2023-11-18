@@ -33,10 +33,7 @@ public class ImageService {
     }
 
     public void deleteImage(Integer id){
-        Optional<Image> imgOp = imageRepository2.findById(id);
-        if(imgOp.isPresent()){
-            imageRepository2.deleteById(id);
-        }
+        imageRepository2.deleteById(id);
     }
 
     public int countImagesInScreen(Integer id, String screenDimensions) {
