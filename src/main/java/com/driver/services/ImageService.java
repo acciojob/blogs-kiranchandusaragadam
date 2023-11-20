@@ -26,7 +26,9 @@ public class ImageService {
         if(blogOp.isPresent()){
             Blog blog = blogOp.get();
             image.setBlog(blog);
+            blog.getImageList().add(image);
             imageRepository2.save(image);
+            blogRepository2.save(blog);
             return image;
         }
         return null;

@@ -14,7 +14,7 @@ public class Blog {
     private Date pubDate;
     @ManyToOne
     private User user;
-    @OneToMany(mappedBy = "blog")
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
     private List<Image> imageList;
 
     public Blog() {
